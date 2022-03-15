@@ -10,6 +10,17 @@ module.exports = withPWA({
     disable: process.env.NODE_ENV === 'development',
     runtimeCaching,
   },
+  async redirects(){
+    return[
+      {
+        source:'/',
+        destination:'/',
+        permanent:false,
+      },
+    
+
+    ];
+  },
   images: {
     domains: [
       'kitstarter.io',
